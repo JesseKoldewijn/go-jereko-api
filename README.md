@@ -6,6 +6,27 @@
 
 > A simple GoLang service using Gin to serve rest endpoints in a efficient way.
 
+## Install
+
+You can either use the docker image or you local environment to run the service.
+
+### Local
+
+If you're familiar with GoLang's Air cli you can just run mod download and run the service using Air.
+
+```sh
+go mod download && go run main.go
+```
+
+### Docker
+
+You can also run the service using docker.
+
+```sh
+docker build -t go-jereko-api .
+docker run -p 8080:8080 go-jereko-api
+```
+
 ## Author
 
 👤 **Jesse Koldewijn**
