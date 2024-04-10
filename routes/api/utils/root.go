@@ -5,6 +5,7 @@ import (
 	"github.com/mileusna/useragent"
 )
 
+// The RouteGroupUtils function in Go sets up a route group for utility endpoints like retrieving client IP and user agent information.
 func RouteGroupUtils(router *gin.RouterGroup) {
 	utils := router.Group("/utils")
 	{

@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// The function `RouteGroupRoot` sets up route groups with different prefixes in a Gin router.
 func RouteGroupRoot(router *gin.Engine) {
 	// prefix /
 	routeGroupCore(router)
