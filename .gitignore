@@ -25,3 +25,6 @@ vendor/
 
 # Output of air
 tmp/
+
+# Fly config
+fly.toml
