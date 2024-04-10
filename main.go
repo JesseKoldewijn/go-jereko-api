@@ -34,7 +34,7 @@ func main() {
 
 	// Create server
 	s := &http.Server{
-		Addr:           ":" + string(PORT),
+		Addr:           "0.0.0.0:" + string(PORT),
 		Handler:        router,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
