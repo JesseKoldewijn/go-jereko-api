@@ -8,7 +8,7 @@ import (
 	"github.com/fvbock/endless"
 
 	// swagger embed files
-	v1 "github.com/JesseKoldewijn/go-jereko-api/routes/v1"
+	"github.com/JesseKoldewijn/go-jereko-api/routes"
 	"github.com/gin-gonic/gin"
 )
 
@@ -37,7 +37,7 @@ func main() {
 	})
 
 	// Routes
-	v1.RouteGroupV1(router)
+	routes.RouteGroupRoot(router)
 
 	// Create server
 	s := &http.Server{
