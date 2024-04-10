@@ -7,6 +7,7 @@ import (
 
 	"github.com/fvbock/endless"
 
+	// swagger embed files
 	v1 "github.com/JesseKoldewijn/go-jereko-api/routes/v1"
 	"github.com/gin-gonic/gin"
 )
