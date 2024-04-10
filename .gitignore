@@ -16,10 +16,6 @@ bin/
 # Go coverage profile
 *.cover
 
-# IDE specific files
-.vscode/
-.idea/
-
 # Dependency directories
 vendor/
 
@@ -28,3 +24,4 @@ tmp/
 
 # Fly config
 fly.toml
+.vercel

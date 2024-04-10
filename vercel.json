@@ -1,0 +1,8 @@
+{
+	"rewrites": [{ "source": "/:path*", "destination": "/api/:path*" }],
+	"build": {
+		"env": {
+			"GIN_MODE": "release"
+		}
+	}
+}
