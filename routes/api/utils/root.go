@@ -5,7 +5,7 @@ import (
 	"github.com/mileusna/useragent"
 )
 
-func RouteGroupUtils(router *gin.Engine) {
+func RouteGroupUtils(router *gin.RouterGroup) {
 	utils := router.Group("/utils")
 	{
 		utils.GET("/ip", func(c *gin.Context) {

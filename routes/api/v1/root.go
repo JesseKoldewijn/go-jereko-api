@@ -2,7 +2,7 @@ package v1
 
 import "github.com/gin-gonic/gin"
 
-func RouteGroupV1(router *gin.Engine) {
+func RouteGroupV1(router *gin.RouterGroup) {
 	v1 := router.Group("/v1")
 	{
 		v1.GET("/", func(c *gin.Context) {

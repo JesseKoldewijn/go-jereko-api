@@ -29,13 +29,6 @@ func main() {
 	// Create router
 	router := gin.Default()
 
-	// Default route
-	router.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Welcome to the Jereko API!",
-		})
-	})
-
 	// Routes
 	routes.RouteGroupRoot(router)
 
@@ -50,15 +43,17 @@ func main() {
 
 	// Server address
 	port := ":" + string(PORT)
-	url := "http://localhost" + port
+	urlLoopback := "http://localhost" + port
+	urlNetwork := "http://0.0.0.0" + port
 
-	println("Server running on: " + url)
+	println("Server running on: \n  " + urlLoopback + "\n  " + urlNetwork)
 
 	// Listen and serve
 	err := endless.ListenAndServe(port, s.Handler)
 
 	// Check for errors
 	if err != nil {
-		println("Error starting server: ", err)
+		// Print error
+		println(err.Error())
 	}
 }
