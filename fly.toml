@@ -7,6 +7,11 @@ app = 'go-jereko-api'
 primary_region = 'ams'
 
 [build]
+  dockerfile = "Dockerfile"
+
+[build.args]
+  PORT = "8080"
+  GIN_MODE = "release"
 
 [http_service]
   internal_port = 8080
@@ -20,3 +25,7 @@ primary_region = 'ams'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+
+[env]
+  PORT = "8080"
+  GIN_MODE = "release"

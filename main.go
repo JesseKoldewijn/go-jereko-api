@@ -22,6 +22,10 @@ func main() {
 	// Get PORT env var
 	for _, env_var := range env_vars {
 		if env_var[:4] == "PORT" {
+			isEmpty := len(env_var) == 4
+			if isEmpty {
+				break
+			}
 			PORT = env_var[5:]
 		}
 	}
