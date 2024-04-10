@@ -7,7 +7,7 @@ import (
 
 // The RouteGroupUtils function in Go sets up a route group for utility endpoints like retrieving client IP and user agent information.
 func RouteGroupUtils(router *gin.RouterGroup) {
-	utils := router.Group("/api/utils")
+	utils := router.Group("/utils")
 	{
 		utils.GET("/ip", func(c *gin.Context) {
 			ip := c.ClientIP()
