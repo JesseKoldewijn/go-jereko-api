@@ -12,8 +12,6 @@ import (
 func RouteGroupRoot(router *gin.Engine) {
 	// prefix /assets
 	routeGroupStatic(router)
-	// prefix /
-	routeGroupCore(router)
 	// prefix /api
 	routeGroupApi(router)
 }
@@ -24,20 +22,15 @@ func routeGroupStatic(router *gin.Engine) {
 	staticGroup.StaticFS("/", http.Dir("./public"))
 }
 
-// Route group for general routes
-func routeGroupCore(router *gin.Engine) {
-	coreGroup := router.Group("/")
+// Route group for API routes
+func routeGroupApi(router *gin.Engine) {
+	apiGroup := router.Group("/api")
 	// path: /
-	coreGroup.GET("/", func(c *gin.Context) {
+	apiGroup.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "Welcome to the Jereko API!",
 		})
 	})
-}
-
-// Route group for API routes
-func routeGroupApi(router *gin.Engine) {
-	apiGroup := router.Group("/api")
 	// path: /api/v1
 	v1.RouteGroupV1(apiGroup)
 	// path: /api/utils
